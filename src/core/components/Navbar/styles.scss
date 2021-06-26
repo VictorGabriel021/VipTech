@@ -1,0 +1,32 @@
+.navbar-content {
+    background-color: #FFF;
+}
+
+.navbar-logo-image {
+    margin: 20px 0 20px 35px;
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: flex-end;
+    margin: 25px 25px 20px 0;
+
+    a {
+        font-style: normal;
+        color: #1A5677;
+        text-decoration: none;
+        
+        &.active {
+          font-weight: bold;
+        }    
+        &:hover {
+          color: #1A5677;
+        }
+      }
+}
+
+.navbar-link {
+    font-size: 16px;
+    line-height: 19px;
+    color: #1A5677;
+}

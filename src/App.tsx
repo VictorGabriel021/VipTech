@@ -1,8 +1,9 @@
 import React from 'react';
+import Routes from 'Routes';
 import './app.scss';
 
 const App = () => (
-  <h1>ola</h1>
+  <Routes />
 );
 
 export default App;
