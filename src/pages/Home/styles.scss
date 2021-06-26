@@ -1,0 +1,37 @@
+.home-container {
+    margin: 45px 25px 30px 30px;
+}
+
+.home-description {
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.home-action-btn {
+    margin: 45px 0 0 30px;
+}
+
+.home-image-align {
+    text-align: center;
+}
+
+.home-image {
+    height: 300px;
+    margin-left: 35px;
+    margin-bottom: 35px;
+}
+
+@media (max-width: 470px) {
+    .home-image {
+        height: 200px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .home-description {
+        margin-top: 40px;
+    }
+}
