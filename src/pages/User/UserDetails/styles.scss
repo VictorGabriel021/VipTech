@@ -1,0 +1,90 @@
+.user-details-container {
+    margin: 30px 50px 85px 50px;
+}
+
+.user-details-content {
+    margin-top: 20px;
+}
+
+.user-details-goback {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.arrow-image {
+    transform: rotate(180deg);
+    margin-right: 10px;
+}
+
+.text-goback {
+    font-size: 26px;
+    line-height: 30px;
+    color: #FFF;
+}
+
+.user-details-card-picture {
+    height: 250px;
+    background: #FFFEFE;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.user-details-image {
+    width: 180px;
+}
+
+.user-details-name {
+    font-size: 26px;
+    line-height: 30px;
+    color: #FFFFFF;
+    margin-top: 35px;
+    text-transform: capitalize;
+    word-break: break-all;
+}
+
+.user-details-card-perfil {
+    height: 430px;
+    background: #FFFEFE;
+    border-radius: 10px;
+}
+
+.user-details-card-content {
+    padding: 50px 45px 0 45px;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+}
+
+@media (max-width: 1125px) {
+    .user-details-name {
+        font-size: 18px;
+    }
+    
+    .user-details-card-content {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .user-details-card-perfil {
+        height: 320px;
+    }
+
+    .user-details-image {
+        width: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .user-details-container {
+        margin: 20px 10px;
+    }
+
+    .user-details-card-perfil {
+        height: 350px;
+    }
+}

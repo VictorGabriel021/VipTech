@@ -6,6 +6,7 @@ type Props = {
     firstName: string;
     lastName: string;
     picture: string;
+    title: string;
 }
 
 const UserCard = (user: Props) => (
@@ -15,7 +16,7 @@ const UserCard = (user: Props) => (
         </div>
         <p className="card-text">
             Id: {user.id}<br />
-            {user.firstName} {user.lastName}
+            {user.title} {user.firstName} {user.lastName}
         </p> 
     </div>
 )

@@ -1,6 +1,7 @@
 import Footer from 'core/components/Footer';
 import Home from 'pages/Home';
 import User from 'pages/User';
+import UserDetails from 'pages/User/UserDetails';
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Navbar from './core/components/Navbar';
@@ -16,7 +17,7 @@ const Routes = () => (
           <User />
         </Route>
         <Route path="/users/:userId">
-            
+          <UserDetails />
         </Route>
    </Switch>
    <Footer />

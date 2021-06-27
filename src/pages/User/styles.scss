@@ -4,6 +4,16 @@
     grid-template-columns: repeat(auto-fill, 265px);
     grid-gap: 30px 35px;
     justify-content: space-between;
+    text-transform: capitalize;
+
+    a {
+        color: #1A5677;
+        text-decoration: none;
+           
+        &:hover {
+            color: #1A5677;
+        }
+      }
 }
 
 @media (max-width: 971px) {
