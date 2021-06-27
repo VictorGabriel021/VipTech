@@ -1,0 +1,13 @@
+.card-container {
+    margin: 25px 45px 40px 45px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 265px);
+    grid-gap: 30px 35px;
+    justify-content: space-between;
+}
+
+@media (max-width: 971px) {
+    .card-container {
+        justify-content: center;
+    }
+}
