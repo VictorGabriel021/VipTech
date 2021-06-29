@@ -16,6 +16,11 @@
       }
 }
 
+.pagination-align {
+    display: flex;
+    justify-content: center;
+}
+
 @media (max-width: 971px) {
     .card-container {
         justify-content: center;

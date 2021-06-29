@@ -1,0 +1,40 @@
+.paginationContainer {
+    display: flex;
+    justify-content: center;
+    color: #1A5677;
+
+    a {
+        padding: 10px;
+        margin: 8px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: #8691AD;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            background-color: #FFF;
+        }
+    }
+}
+
+.page-active {
+    a {
+        background-color: #FFF;
+    }
+}
+
+.previous, .next {
+    a {
+        background-color: unset;
+
+        &:hover {
+            background-color: unset;
+        }
+    }
+}
+
+.arrow-image {
+    transform: rotate(180deg);
+}

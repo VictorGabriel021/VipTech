@@ -1,4 +1,5 @@
 export type UserResponse = {
+    total: number;
     data: User[];
 }
 

@@ -11,7 +11,7 @@ type ParamsType = {
 }
 
 const BASE_URL = 'https://dummyapi.io/data/api';
-const APP_ID = '60d743ca07d01a29db7a5fc0';
+const APP_ID = '60db1bce83922b2e8e111d4b';
 
 const UserDetails = () => {
 
