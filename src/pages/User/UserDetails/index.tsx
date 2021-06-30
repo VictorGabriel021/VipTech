@@ -48,6 +48,7 @@ const UserDetails = () => {
                     <>
                         <div className="user-details-card-perfil">
                             <p className="user-details-card-content">
+                            <b>Data do Registro:</b> {dayjs(user?.registerDate).format('DD/MM/YYYY')}<br />
                             <b>Email:</b> {user?.email}<br />
                             <b>Telefone:</b> {user?.phone}<br />
                             <b>Gênero:</b> {user?.gender}<br />

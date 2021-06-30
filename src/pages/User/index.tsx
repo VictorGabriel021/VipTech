@@ -15,7 +15,7 @@ const [activePage, setActivePage] = useState(0);
 const [pageCount, setPageCount] = useState(0);
 const [id, setId] = useState('');    
 const [limit, setLimit] = useState(''); 
-const [loading, setLoading] = useState(false); 
+const [loading, setLoading] = useState(false);
 
     const getUsers = useCallback(() => {          
         const params = {
@@ -25,16 +25,16 @@ const [loading, setLoading] = useState(false);
 
         setLoading(true)
         makeRequest({url: '/user', params})
-          .then(response => {          
+          .then(response => {   
               setDataResponse(response.data)
-              setPageCount(Math.ceil(response.data.total / response.data.limit))        
-            }).finally(() => setLoading(false));
+              setPageCount(Math.ceil(response.data.total / response.data.limit))  
+          }).finally(() => setLoading(false));
             
     }, [activePage, limit]);
   
     useEffect(() => {
         getUsers();
-    }, [getUsers]);
+    }, [getUsers]);   
 
     const handleChangeId = (id: string) => {
         setId(id);
