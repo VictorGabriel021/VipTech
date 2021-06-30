@@ -1,50 +1,14 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+Como executar o Projeto:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1 - Clone o projeto no seu computador.
 
-## Available Scripts
+2 - Execute o comando npm run start para executar o projeto.
 
-In the project directory, you can run:
+Detalhes do Projeto:
 
-### `npm start`
+1 - A Api https://dummyapi.io disponibiliza apenas 500 requisições por dia, caso gere o erro 429 tem duas opções para resolver:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-=======
-# VipTech
->>>>>>> f8620a3d63d2f6e68a8df9af614cba71ddfd6811
+1.1 - Espere 24 horas para poder chamar as requisições.
+1.2 - No arquivo request.ts (caminho: src/core/utils/request.ts) basta trocar o APP_ID por um id válido(que pode ser gerado apenas se estiver logado no site da dummyapi).
+  
+Figma do Projeto: https://www.figma.com/file/6ZIMBOxPrEn0Iw1M3pozzq/VipTech?node-id=0%3A1
