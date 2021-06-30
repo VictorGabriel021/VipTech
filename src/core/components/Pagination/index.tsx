@@ -21,8 +21,8 @@ const Pagination = ({ pageCount, activePage, onChange } : Props) => {
             onPageChange={selectedItem => onChange(selectedItem.selected)}
             containerClassName={'paginationContainer'}
             activeClassName={'page-active'}
-            marginPagesDisplayed={2}
-            pageRangeDisplayed={5}
+            marginPagesDisplayed={1}
+            pageRangeDisplayed={2}
           />
       );
 };

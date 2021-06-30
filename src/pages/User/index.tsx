@@ -1,14 +1,11 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import './styles.scss';
-import axios from 'axios';
 import UserCard from './UserCard';
 import { UserResponse } from 'core/types/Dummy';
 import { Link } from 'react-router-dom';
 import Pagination from 'core/components/Pagination';
 import UserFilter from 'core/components/UserFilter';
-
-const BASE_URL = 'https://dummyapi.io/data/api';
-const APP_ID = '60db1bce83922b2e8e111d4b';
+import { makeRequest } from 'core/utils/request';
 
 const User = () => {
 
@@ -24,18 +21,13 @@ const [limit, setLimit] = useState('');
             limit: limit
           }
 
-        axios({
-            method: 'GET',
-            url: `${BASE_URL}/user`,
-            headers: { 'app-id': APP_ID },
-            params
-          })
+        makeRequest({url: '/user', params})
           .then(response => {          
               setDataResponse(response.data)
               setPageCount(Math.ceil(response.data.total / response.data.limit))        
             });
             
-    }, [activePage, limit, id]);
+    }, [activePage, limit]);
   
     useEffect(() => {
         getUsers();

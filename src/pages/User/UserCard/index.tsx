@@ -12,7 +12,7 @@ type Props = {
 const UserCard = (user: Props) => (
     <div className="card-content">
         <div className="card-picture-align">
-            <img src={user.picture} className="card-picture" />
+            <img src={user.picture} alt={user.id} className="card-picture" />
         </div>
         <p className="card-text">
             Id: {user.id}<br />

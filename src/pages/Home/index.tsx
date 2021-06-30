@@ -13,12 +13,14 @@ const Home = () => (
                     patrimonial, rastreamento veicular, fábrica de software e<br/> 
                     soluções customizáveis em automação de processos empresariais.
                 </p>
-                <Link to="/users">
-                    <button className="btn btn-outline-light home-action-btn">Consultar Clientes</button>
-                </Link>
+                <div className="home-action-btn">
+                    <Link to="/users">
+                        <button className="btn btn-outline-light">Consultar Clientes</button>
+                    </Link>
+                </div>
             </div>
             <div className="col-12 col-md-6 order-1 order-md-2 home-image-align">
-                <img src={HomeImage} className="home-image"></img>
+                <img src={HomeImage} alt={HomeImage} className="home-image"></img>
             </div>
         </div>
     </div>

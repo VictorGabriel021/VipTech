@@ -1,5 +1,5 @@
 .user-filters-container {
-    margin: 20px;
+    margin: 25px 40px;
     padding: 10px 20px;
     border-radius: 10px;
     display: flex;
@@ -30,4 +30,15 @@
 .filter-select-item {
     flex: 1;
     margin: 0 20px;
+}
+
+@media (max-width: 610px) {
+    .user-filters-container {
+        display: block;
+        margin: 20px;
+    }
+
+    .filter-select-item {
+        margin: 20px 0;
+    }
 }

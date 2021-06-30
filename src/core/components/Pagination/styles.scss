@@ -1,7 +1,9 @@
 .paginationContainer {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     color: #1A5677;
+    padding: 0;
 
     a {
         padding: 10px;
@@ -37,4 +39,10 @@
 
 .arrow-image {
     transform: rotate(180deg);
+}
+
+@media (max-width: 400px) {
+    .paginationContainer {
+        justify-content: unset;
+    }
 }

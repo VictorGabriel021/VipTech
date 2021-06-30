@@ -37,6 +37,18 @@
     margin-left: 12px;
 }
 
+@media (min-width: 768px) {
+    .footer-container {
+        padding-bottom: 200px;
+    }
+
+    .footer-content{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
 @media (max-width: 767px) {
     .footer-follow-us-align {
         text-align: unset;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './styles.scss';
 import { ReactComponent as SearchIcon } from 'core/assets/images/icon-search.svg';
 

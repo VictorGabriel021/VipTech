@@ -2,16 +2,13 @@ import React, { useEffect, useState } from 'react';
 import './styles.scss';
 import { ReactComponent as ArrowImage } from 'core/assets/images/arrow.svg';
 import { Link, useParams } from 'react-router-dom';
-import axios from 'axios';
 import { User } from 'core/types/Dummy';
 import dayjs from 'dayjs';
+import { makeRequest } from 'core/utils/request';
 
 type ParamsType = {
     userId: string
 }
-
-const BASE_URL = 'https://dummyapi.io/data/api';
-const APP_ID = '60db1bce83922b2e8e111d4b';
 
 const UserDetails = () => {
 
@@ -19,12 +16,7 @@ const UserDetails = () => {
     const [user, setUser] = useState<User>();
     
     useEffect(() => {
-
-        axios({
-            method: 'GET',
-            url: `${BASE_URL}/user/${userId}`,
-            headers: { 'app-id': APP_ID },
-          })
+          makeRequest({url: `/user/${userId}`})
           .then(response => setUser(response.data));
     }, [userId]);
 
@@ -38,7 +30,7 @@ const UserDetails = () => {
             <div className="row justify-content-center">
                 <div className="col-12 col-sm-6 col-md-4 mb-12">
                     <div className="user-details-card-picture">
-                        <img src={user?.picture} className="user-details-image" />
+                        <img src={user?.picture} alt={user?.id} className="user-details-image" />
                     </div>
                     <h1 className="user-details-name">Id: {user?.id}<br />
                     {user?.title} {user?.firstName} {user?.lastName}</h1>
