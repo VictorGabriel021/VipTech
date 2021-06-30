@@ -1,6 +1,6 @@
 Como executar o Projeto:
 
-1 - Clone o projeto do seu computador.
+1 - Clone o projeto no seu computador.
 
 2 - Execute o comando npm run start para executar o projeto.
 
