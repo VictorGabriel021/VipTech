@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import Pagination from 'core/components/Pagination';
 import UserFilter from 'core/components/UserFilter';
 import { makeRequest } from 'core/utils/request';
+import UserCardLoader from './UserCardLoader';
 
 const User = () => {
 
@@ -14,6 +15,7 @@ const [activePage, setActivePage] = useState(0);
 const [pageCount, setPageCount] = useState(0);
 const [id, setId] = useState('');    
 const [limit, setLimit] = useState(''); 
+const [loading, setLoading] = useState(false); 
 
     const getUsers = useCallback(() => {          
         const params = {
@@ -21,11 +23,12 @@ const [limit, setLimit] = useState('');
             limit: limit
           }
 
+        setLoading(true)
         makeRequest({url: '/user', params})
           .then(response => {          
               setDataResponse(response.data)
               setPageCount(Math.ceil(response.data.total / response.data.limit))        
-            });
+            }).finally(() => setLoading(false));
             
     }, [activePage, limit]);
   
@@ -58,10 +61,9 @@ const [limit, setLimit] = useState('');
           handleChangeLimit={handleChangeLimit}
           clearFilters={clearFilters} />
 
-        <div className="card-container">           
-            {
+        <div className="card-container"> 
+            {loading ? <UserCardLoader /> :                       
                 dataResponse?.data.filter(data  => data.id.includes(id)).map(user => (
-                    
                     <Link to={`/users/${user.id}`} key={user.id}>
                         <UserCard key={user.id} id={user.id} title={user.title} firstName={user.firstName} 
                         lastName={user.lastName} picture={user.picture} />
