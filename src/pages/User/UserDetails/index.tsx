@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './styles.scss';
 import { ReactComponent as ArrowImage } from 'core/assets/images/arrow.svg';
 import { Link, useParams } from 'react-router-dom';
-import { User } from 'core/types/Dummy';
+import { Users } from 'core/types/Dummy';
 import dayjs from 'dayjs';
 import { makeRequest } from 'core/utils/request';
 import LoaderPerfil from '../UserDetailsLoader/LoaderPerfil';
@@ -15,12 +15,14 @@ type ParamsType = {
 const UserDetails = () => {
 
     const { userId } = useParams<ParamsType>();
-    const [user, setUser] = useState<User>();
+    const [user, setUser] = useState<Users>();
     const [loading, setLoading] = useState(true); 
+    const [error, setError] = useState(false);
 
     useEffect(() => {
           makeRequest({url: `/user/${userId}`})
           .then(response => setUser(response.data))
+          .catch(() => setError(true))
           .finally(() => setLoading(false));
     }, [userId]);
 
@@ -34,6 +36,7 @@ const UserDetails = () => {
             <div className="row justify-content-center align-perfil-description">
                 <div className="col-12 col-sm-6 col-md-4 mb-12">
                     {loading ? <LoaderPerfil /> : (
+                        !error && 
                     <>
                         <div className="user-details-card-picture">
                             <img src={user?.picture} alt={user?.id} className="user-details-image" />
@@ -45,6 +48,7 @@ const UserDetails = () => {
                 </div>
                 <div className="col-12 col-md-6">
                     {loading ? <LoaderDescription /> : (
+                        !error && 
                     <>
                         <div className="user-details-card-perfil">
                             <p className="user-details-card-content">
@@ -61,6 +65,7 @@ const UserDetails = () => {
                         </div>
                     </>
                     )}
+                        {error && <h3 className="error-id-invalid">Id inválido</h3>} 
                 </div>
             </div>
         </div>

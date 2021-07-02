@@ -1,9 +1,9 @@
 export type UserResponse = {
     total: number;
-    data: User[];
+    data: Users[];
 }
 
-export type User = {
+export type Users = {
     id: string;
     title: string;
     firstName: string;

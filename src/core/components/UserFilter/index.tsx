@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles.scss';
 import { ReactComponent as SearchIcon } from 'core/assets/images/icon-search.svg';
+import useDebounce from 'core/utils/useDebounce';
 
 type Props = {
     id?: string;
@@ -10,7 +11,21 @@ type Props = {
     clearFilters: () => void;
 }
 
-const UserFilter = ({ id, limit, handleChangeId, handleChangeLimit, clearFilters }: Props) => {
+const UserFilter = ({ 
+    id, 
+    limit, 
+    handleChangeId, 
+    handleChangeLimit, 
+    clearFilters 
+}: Props) => {
+
+    const [displayValue, setDisplayValue] = useState(id);
+    const debounceChange = useDebounce(handleChangeId, 2000);
+
+    const handleChangeValue = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setDisplayValue(event.target.value);
+        debounceChange(event.target.value);
+    }
 
     return(
         <>
@@ -18,11 +33,10 @@ const UserFilter = ({ id, limit, handleChangeId, handleChangeLimit, clearFilters
             <div className="input-search">
                 <input
                   type="text"
-                  value={id}
+                  value={displayValue}
                   className="form-control"
                   placeholder="Pesquisar usuário por id" 
-                  onChange={event => {handleChangeId(event.target.value);
-                  }}
+                  onChange={handleChangeValue}
                   />
                 <SearchIcon />
             </div>

@@ -8,7 +8,7 @@ type RequestParams = {
 }
 
 const BASE_URL = 'https://dummyapi.io/data/api';
-const APP_ID = '60dbd0158f795088e70e2344';
+const APP_ID = '60dee8be62f9887287f78cb2';
 
 export const makeRequest = ({ method = 'GET', url, data, params }: RequestParams) => {
   return axios({

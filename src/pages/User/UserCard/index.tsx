@@ -2,11 +2,11 @@ import React from  'react';
 import './styles.scss';
 
 type Props = {
-    id: string;
-    firstName: string;
-    lastName: string;
-    picture: string;
-    title: string;
+    id?: string;
+    firstName?: string;
+    lastName?: string;
+    picture?: string;
+    title?: string;
 }
 
 const UserCard = (user: Props) => (
