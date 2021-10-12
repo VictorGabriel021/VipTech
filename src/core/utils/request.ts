@@ -7,7 +7,7 @@ type RequestParams = {
   params?: object;
 }
 
-const BASE_URL = 'https://dummyapi.io/data/api';
+const BASE_URL = 'https://dummyapi.io/data/v1';
 const APP_ID = '6165900c69b8375ef68792ca';
 
 export const makeRequest = ({ method = 'GET', url, data, params }: RequestParams) => {
